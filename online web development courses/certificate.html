@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WebTech Institute - Completion Certificate</title>
+<style>
+  
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: url("https://t3.ftcdn.net/jpg/04/61/31/24/360_F_461312494_8FumCHhojk8COadhjgCwBQLZTrLTYqmi.jpg");
+    background-repeat: no-repeat;
+    background-position: 140px 9px;
+    background-size: 1240px 720px;
+    backface-visibility: hidden;
+    height: 100vh;
+
+    
+  }
+  .certificate {
+    border: 2px solid #333;
+    padding: 20px;
+    max-width: 1200px;
+    height: 680px;
+    margin: 0 auto;
+  }
+  
+  h2{
+    font-size: 60px;
+  }
+  span{
+    font-family: Arial, sans-serif;
+    font-size: xx-large;
+  }
+  p{
+    font-size: x-large;
+  }
+  h3{
+    font-size: xx-large;
+  }
+  
+</style>
+</head>
+<body>
+    <div class="certificate">
+        <img class="logo" src="https://static.thenounproject.com/png/445307-84.png" alt="">
+      <h1>WebTech</h1>
+      <h2>Certificate  <br><span>of  completion </span></h2>
+      <p>This is to certify that</p>
+      <h3 id="studentName">[Name]</h3>
+      <p>has successfully completed the Web Development Course fom Web Tech.</p>
+      <p>Date: <span id="completionDate">[Date]</span></p>
+    </div>
+    <br>
+    <button onclick="window.print()">Print</button>
+    
+    <script>
+      const studentName = prompt("Please enter your name:");
+      const completionDate = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+      document.getElementById('studentName').textContent = studentName;
+      document.getElementById('completionDate').textContent = completionDate;
+    </script>
+    </body>
+    </html>
